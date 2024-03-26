@@ -1,13 +1,4 @@
-/*
-This demo was very old and overly complex
-I have updated it with a cleaner, more modern technique
-It still uses mix-blend-modes, so the basic idea hasn't changed
 
-Original
-https://codepen.io/giana/pen/MWxONWm
-*/
-
-/* Create pseudo elements for both elements */
 
 body {
   --spotlight-color: orange;
@@ -162,7 +153,7 @@ h1 {
 }
 
 body {
-  background: black;
+  background: #150220;
   display: flex;
   min-height: 100vh;
   justify-content: center;
