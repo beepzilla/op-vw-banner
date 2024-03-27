@@ -7,7 +7,7 @@ body {
   --color-2: hsl(295, 88%, 32%);
   --color-3: hsl(59, 100%, 50%);
   font-family: 'Press Start 2P', cursive;
-  background: #150220; /* Updated background color */
+  background: #150220; /* Background color */
 }
 
 .text-effect-wrapper::after {
@@ -41,13 +41,12 @@ body {
 }
 
 .text-effect-wrapper {
-  /* Can be anything light-colored */
   --spotlight-color: white;
 
   overflow: hidden;
   position: relative;
+  background: #150220; /* Same as body background */
 
-  /* Shimmer animation */
   &::before {
     animation: shimmer 5s infinite linear;
     background: 
@@ -59,7 +58,6 @@ body {
     z-index: 3;
   }
 
-  /* Extra filter to boost colors and contrast */
   &::after {
     backdrop-filter: blur(1px) brightness(90%) contrast(150%);
     z-index: 4;
@@ -73,17 +71,9 @@ body {
 }
 
 .text {
-  /* Mask colors */
-  /* Should be black and white */
-  --background-color: #150220; /* Updated background color */
+  --background-color: #150220;
   --text-color: white;
 
-  /* Text color */
-  /* Can be anything */
-  --color-1: red;
-  --color-2: blue;
-
-  /* Fuzzy white outline text */
   color: transparent;
   text-shadow: 
     0 0 0.02em var(--background-color), 
@@ -91,13 +81,11 @@ body {
     0 0 0.02em var(--text-color), 
     0 0 0.02em var(--text-color);
 
-  /* Improve contrast of outline */
   &::before {
     backdrop-filter: blur(0.013em) brightness(400%);
     z-index: 1;
   }
 
-  /* Add text color */
   &::after {
     background: linear-gradient(45deg, var(--color-1), var(--color-2));
     mix-blend-mode: multiply;
@@ -105,7 +93,6 @@ body {
   }
 }
 
-/* Alternative styling */
 body:has(#option-toggle:checked) {
   & .text-effect-wrapper {
     --spotlight-color: orange;
@@ -136,8 +123,6 @@ body:has(#option-toggle:checked) {
   } 
 }
 
-/* === Pen styling, ignore */
-
 h1 {
   --font-size: clamp(3.5rem, 2rem + 10vw, 10rem);
 
@@ -167,33 +152,6 @@ label {
   
   &:has(:checked) {
     background-color: hsl(350deg, 60%, 50%);
-  }
-}
-
-body {
-  --spotlight-color: orange;
-  --angle: 5deg;
-  --color-1: hsl(163, 100%, 51%);
-  --color-2: hsl(295, 88%, 32%);
-  --color-3: hsl(59, 100%, 50%);
-}
-
-.text-effect-wrapper::after {
-  backdrop-filter: brightness(90%) contrast(150%);
-}
-
-.text {
-  text-shadow: 
-    0 0 0.03em var(--background-color),
-    0 0 0.03em var(--text-color);
-
-  &::before {
-    backdrop-filter: brightness(150%) contrast(200%);
-  }
-
-  &::after {
-    background: linear-gradient(var(--angle), var(--color-1), var(--color-2), var(--color-3));
-    mix-blend-mode: color-dodge;
   }
 }
 
