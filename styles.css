@@ -9,7 +9,7 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
-
+background: #150220;
 .text-effect-wrapper::after {
   backdrop-filter: brightness(90%) contrast(150%);
 }
@@ -75,7 +75,7 @@ body {
 .text {
   /* Mask colors */
   /* Should be black and white */
-  --background-color: black;
+  --background-color: #150220;
   --text-color: white;
 
   /* Text color */
@@ -164,7 +164,7 @@ body {
 }
 
 label {
-  background-color: hsl(240deg, 20%, 50%);
+  background-color: #150220;
   border-radius: 5px;
   color: #fff;
   padding: 0.5em 1em;
@@ -175,7 +175,7 @@ label {
   z-index: 1000;
   
   &:has(:checked) {
-    background-color: hsl(350deg, 60%, 50%);
+    background-color: #150220;
   }
 }
 
