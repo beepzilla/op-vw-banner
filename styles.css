@@ -141,7 +141,7 @@ body:has(#option-toggle:checked) {
 h1 {
   --font-size: clamp(6.25rem, 3.25rem + 15vw, 13.75rem);
 
-  font: 700 var(--font-size)/1 "Lato", sans-serif;
+  font: 700 var(--font-size)/1 'Press Start 2P', cursive;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
