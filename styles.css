@@ -8,25 +8,11 @@ body {
   --color-3: hsl(59, 100%, 50%);
   font-family: 'Press Start 2P', cursive;
   background: #150220;
-}
-
-.text-effect-wrapper::after {
-  backdrop-filter: brightness(90%) contrast(150%);
-}
-
-.text {
-  text-shadow: 
-    0 0 0.03em var(--background-color),
-    0 0 0.03em var(--text-color);
-
-  &::before {
-    backdrop-filter: brightness(150%) contrast(200%);
-  }
-
-  &::after {
-    background: linear-gradient(var(--angle), var(--color-1), var(--color-2), var(--color-3));
-    mix-blend-mode: color-dodge;
-  }
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .text-effect-wrapper,
@@ -73,7 +59,6 @@ body {
   --text-color: white;
   --color-1: red;
   --color-2: blue;
-
   color: transparent;
   text-shadow: 
     0 0 0.02em var(--background-color), 
@@ -99,6 +84,12 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   margin: 10px;
+  &:empty,
+  &:focus {
+    border: 2px dotted white;
+    min-width: 1ch;
+    outline-offset: 5px;
+  }
 }
 
 label {
@@ -110,6 +101,9 @@ label {
   bottom: 1rem;
   right: 1rem;
   z-index: 1000;
+  &:has(:checked) {
+    background-color: #150220;
+  }
 }
 
 input {
