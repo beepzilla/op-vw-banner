@@ -144,7 +144,7 @@ h1 {
   font: 400 var(--font-size)/1 'Press Start 2P', cursive;
   text-transform: uppercase;
   text-align: center;
-  margin: 0;
+  margin: 10px;
 
   &:empty,
   &:focus {
