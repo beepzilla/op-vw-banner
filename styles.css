@@ -139,9 +139,9 @@ body:has(#option-toggle:checked) {
 /* === Pen styling, ignore */
 
 h1 {
-  --font-size: clamp(4.25rem, 2.25rem + 13vw, 11.75rem);
+  --font-size: clamp(3.5rem, 2rem + 10vw, 10rem);
 
-  font: 500 var(--font-size)/1 'Press Start 2P', cursive;
+  font: 400 var(--font-size)/1 'Press Start 2P', cursive;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
